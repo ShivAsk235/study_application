@@ -1,0 +1,17 @@
+<div class="login-wrapper">
+  <div class="intro">
+    <h1>Welcome to StudyMate</h1>
+    <p>Your personalized space for notes, quizzes, and study resources — now in your language!</p>
+    <p><strong>Available Languages:</strong> English, हिंदी (Hindi), தமிழ் (Tamil), తెలుగు (Telugu), मराठी (Marathi)</p>
+  </div>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+      <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required />
+      <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+    </form>
+  </div>
+</div>
